@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moodify</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="app-header">
+    <div class="logo">🎵 Moodify</div>
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search songs..." />
+      <button onclick="searchYouTube()">🔍</button>
+    </div>
+    <div class="signup-btn">
+      <button onclick="alert('Signup coming soon!')">Sign Up</button>
+    </div>
+  </header>
+
+  <!-- Tagline -->
+  <div class="tagline">
+    <span class="animated-text">Feel the beat, live the mood</span>
+  </div>
+
+  <!-- Mood Buttons -->
+  <div class="mood-buttons">
+    <button onclick="setMood('happy')">😊 Happy</button>
+    <button onclick="setMood('sad')">😢 Sad</button>
+    <button onclick="setMood('chill')">😎 Chill</button>
+  </div>
+
+  <!-- Camera Section -->
+  <div class="camera-section">
+    <video id="webcam" autoplay muted></video>
+    <div id="detected-mood">Mood: Detecting...</div>
+    <button class="camera-btn" onclick="startCamera()">🎥 Start Camera</button>
+  </div>
+
+  <!-- Video Frame -->
+  <div id="video-frame"></div>
+
+  <!-- Audio Player Box -->
+  <div class="audio-box">
+    <div class="song-info" id="song-title">Your vibe, your music 🎶</div>
+    <audio id="audio-player" controls></audio>
+    <div class="controls">
+      <button onclick="playNextSong()">⏭️ Next Song</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
