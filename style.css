@@ -1,0 +1,199 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+/* Header */
+.app-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.search-bar {
+  flex-grow: 1;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-bar button {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+  background: #fff;
+  color: #4a00e0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.signup-btn button {
+  background: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: #4a00e0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Tagline */
+.tagline {
+  margin: 30px 0 10px;
+}
+
+.animated-text {
+  font-size: 24px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #1db954, #1dd1a1, #1db954);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 2.5s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+
+/* Mood Buttons */
+.mood-buttons {
+  display: flex;
+  gap: 1rem;
+  margin: 15px 0;
+}
+
+.mood-buttons button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.mood-buttons button:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Camera Section */
+.camera-section {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#webcam {
+  width: 300px;
+  height: 220px;
+  border-radius: 12px;
+  background: #000;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+#detected-mood {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.camera-section button {
+  margin-top: 10px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 25px;
+  background: #fff;
+  color: #4a00e0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Song Title */
+#song-title {
+  margin: 25px 0 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* YouTube Frame */
+#video-frame iframe {
+  width: 90vw;
+  max-width: 600px;
+  height: 320px;
+  border-radius: 15px;
+  margin-top: 15px;
+  border: none;
+}
+
+/* Audio Player Section */
+.audio-controls {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.audio-controls audio {
+  width: 300px;
+  border-radius: 15px;
+  outline: none;
+  background: #fff;
+}
+
+.audio-controls button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #fff;
+  color: #4a00e0;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
